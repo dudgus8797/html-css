@@ -1,0 +1,60 @@
+/* 폰트 속성은 자식 속성에 상속됨 특히 장식요소들에게 상속이됨(기울기, 굵기 등) 배치에 관한것은 상속이 안됨 
+컬러 속성은 상속이 됨*/
+body {
+  font-family: "Pretendard Variable", Pretendard, sans-serif;
+  margin: 20px;
+  border: 10px solid green;
+  padding: 50px;
+  color: darkblue;
+}
+/* 상속이 되었다해도 직접지정된 값은 덮어쓰기 됨
+h1 {
+  color: green;
+}
+p {
+  color: orange;
+}
+똑같은 p요소여도 순서가 마지막인것이 적용됨 id가 파워가 쌤 하지만 id는 유니크해야함 스타일링 할때는 id보다 class를 사용하는것이 좋음
+p {
+  color: gray;
+} 
+#school.likelion {
+  color: gray;
+}
+#school {
+  color: red;
+} 
+p {
+  color: blue;
+} */
+
+p {
+  color: silver;
+}
+
+/* 익명레이어에게 우선순위를 알려줌 맨 뒤에 있는 것이 우선 순위 */
+@layer techit, likelion;
+
+@layer likelion {
+  p {
+    color: red;
+  }
+}
+
+/* 익명의 레이어는 먼저있는 요소가 우선순위가 됨 : important는 매우 상위 순위 */
+@layer teckit {
+  p {
+    color: green !important;
+  }
+}
+
+@layer likelion {
+  h2 {
+    background-color: yellow;
+  }
+}
+@layer teckit {
+  h2 {
+    background-color: tomato;
+  }
+}
