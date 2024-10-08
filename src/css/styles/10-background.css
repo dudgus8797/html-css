@@ -1,0 +1,38 @@
+@import "./../../common/mordern-reset.css";
+/* body는 자식요소 높이크기 만큼 늘어남 */
+body {
+  margin: 50px;
+  background-color: rgb(230, 230, 129);
+  background-image: url(./../../assets/images/rabbit.png);
+  background-repeat: no-repeat;
+  /* 0은 처음 x축관점으로 끝나는 쪽으로 배치*/
+  background-position: 100% 100%;
+  background-size: 100px 120px;
+  background-attachment: fixed;
+}
+
+.bg-text-gradient {
+  font-size: 3.5rm;
+  font-weight: 900;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-block: 20px;
+  background-color: lightgreen;
+  background-image: linear-gradient(red, orange, green, darkblue, purple);
+  background-clip: text;
+  color: transparent;
+}
+
+.bg-origin {
+  width: 800px;
+  inline-size: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-inline: auto;
+  /* background-color: pink;
+  background-image: url(./../../assets/thumbnail/meeting-room.jpg);
+  background-origin: border-box; */
+  background: salmon url(./../../assets/thumbnail/meeting-room.jpg) border-box no-repeat 20px 20px / cover;
+  padding: 20px;
+  border: 20px solid hsla(350 50% 50% / 0.2);
+}
