@@ -1,0 +1,50 @@
+@import "./../../common/mordern-reset.css";
+
+div {
+  padding: 10px;
+  font-size: 3rem;
+  /* currenColor는 글자색이랑 같은 색이 됨 */
+  border: 1px solid currentColor;
+}
+
+.static {
+  background-color: yellow;
+}
+/* static의 경우 마크업대로 보임 */
+
+/* span요소에 fixed를 주면 block(BFC)요소로 렌더링 됨 width height를 주지 않으면 컨텐츠 요소 만큼으로 보임
+body요소의 위치에 있지않고 떠있음 그래서 겹쳐보임 마크업한 위치에서 떠있음*/
+.fixed {
+  background-color: hsla(250 50% 50% / 1);
+  position: fixed;
+  inset-block-end: 0;
+  inset-inline-end: 0;
+}
+.relative-wrapper {
+  position: relative;
+  inset-block-start: 50px;
+  inset-inline-start: 50px;
+}
+.abolute-wrapper {
+  position: absolute;
+  /* inset-block-start: 50px;
+  inset-block-end: 50px; */
+}
+/* absolut는 자신 보다 위에 있는(부모) 컨테이너를 기준임 단 그 컨테이너가 static이 아니여야 움직임  */
+.absolute {
+  width: 650px;
+  inline-size: 650px;
+  background: sandybrown;
+  position: absolute;
+  inset-inline-start: 100px;
+  inset-block-start: 0;
+}
+.sticky {
+  background-color: aquamarine;
+  padding: 20px;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  margin-block: 100px;
+  position: sticky;
+  inset-block-start: 0;
+}
