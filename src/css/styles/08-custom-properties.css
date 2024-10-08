@@ -44,9 +44,9 @@ h1 {
 p {
   margin: var(--gap);
 }
-/* 루트가 아닌 .local-variable에만 주는 것, 지역 변수*/
+/* 루트가 아닌 .local-variable에만 주는 것, 지역 변수 html에 style속성으로 사용자지정 속성을 안준경우 뒤에 ,로 찍은 색으로 나옴(콜백 컬러)*/
 .local-variable {
-  --text-color: var(--custom-color);
+  --text-color: var(--custom-color, #1e3d62);
 
   color: var(--text-color);
 }
