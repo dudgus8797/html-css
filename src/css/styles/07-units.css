@@ -1,0 +1,55 @@
+/* body요소의 마진이 사라짐 */
+@import "./../../common/normalize.css";
+
+body {
+}
+/* px 단위 유동적이지 못함 고정단위 */
+.unit-px {
+  font-size: 20px;
+}
+/* em단위 상속 관련 이슈가있음 1.5em이면 1.5배 커짐 body font * .unit-em-wrapper1.5em * .unit-em 식으로 상속됨, 유연한것이 특징 반응형에적합 */
+.unit-em-wrapper {
+  font-size: 1.5em;
+}
+
+.unit-em {
+  font-size: 1.5em;
+}
+/* rem단위 기본 폰트(root)기준16에 비례해서 상대적으로 나옴 유연한것이 특징 반응형에 적합 부모의 상속을 받지 않고 root인 html의 상속을 받음*/
+.unit-rem-wrapper {
+  font-size: 1.5rem;
+}
+.unit-rem {
+  font-size: 0.75rem;
+}
+
+/* em과 같음 하지만 font-size에서만 같다고 느껴지는 것 margin,padding등에 사용하면 inline(width)기준으로 함 */
+.unit-percentage-wrapper {
+  font-size: 1.5em;
+}
+.unit.percentage {
+  font-size: 150%;
+}
+/* 반응형 폰트 사이즈 창의 크기에 따라 달라짐 min과 max를 줘 만들수 있음 */
+.unit-vw {
+  font-size: 3vw;
+}
+
+/* 색상값 */
+.unit-color-name {
+  color: darkgreen;
+}
+
+.unit-color-hex {
+  color: #ff0000;
+  background-color: #0000ff; /*#00f로 줄일수 있음*/
+}
+/* ,없이 공백을 넣어 만들어도 됨 */
+.unit-color-rgb {
+  color: rgb(0, 255, 0);
+  background-color: rgb(255, 255, 0);
+}
+.unit-color-hsla {
+  color: hsl(310, 50%, 50%, 0.5); /*명도%채도%*/
+  background-color: hsla(110 50% 20%/ 0.5);
+}
