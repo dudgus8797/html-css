@@ -1,0 +1,45 @@
+@import "./../../common/normalize.css";
+
+.member {
+  background-color: yellow;
+  /* div class="member" 안에 있는 ul */
+  .member__list {
+    /* list-style-type: none; */
+    list-style: "";
+  }
+  .member__item {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-block: 10px;
+  }
+  /* &는 .member를 뜻함 하지만 명시값이 중첩보다 높지 않음  */
+  /* & li {
+    background-color: pink;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-block: 20px;
+  } */
+
+  .member__link {
+    text-decoration: none;
+    color: #121212;
+
+    &:hover,
+    &:focus {
+      border: 1px solid red;
+
+      /* a:hover {
+    color: #0f0;
+  } */
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+}
+/* sass 방식이라 지원하지 않음 */
+.likelion {
+  &__list {
+    background-color: lightgreen;
+  }
+}
