@@ -53,7 +53,14 @@ body {
     /* 폰트사이즈 기준으로 커짐 */
     padding: 1em;
   }
-
+  thead,
+  tbody,
+  tr,
+  th,
+  td {
+    /* inherit은 상속하도록 만듦 */
+    border: inherit;
+  }
   thead {
     position: sticky;
     top: 0;
