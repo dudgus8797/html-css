@@ -1,0 +1,71 @@
+@import "./../../common/mordern-reset.css";
+body {
+  margin: 50px;
+}
+
+/* 테이블 스타일링 */
+.table-wrapper {
+  height: 625px;
+  block-size: 625px;
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+}
+.table-styling {
+  /* table-layout fixed는 반듯이 width값을 줘야함 */
+  table-layout: fixed;
+  /* border-width / border-style / border-color 을 숏핸드 스타일로 지정 */
+  border: 1px solid currentColor;
+  /* border선의 간격을 처리하는 것 */
+  /* border-collapse: separate; */
+  border-collapse: collapse;
+  /* border 여백 크기 */
+  border-spacing: 0;
+  /* table 레이아웃은 오토이기 때문에 넓이를 자동으로 계산해서 넓이를 할당해줌 */
+  width: 100%;
+  inline-size: 100%;
+
+  /* 행이 넘치면 스크롤이 생김 */
+  overflow-y: auto;
+
+  .number {
+    inline-size: 10%;
+  }
+
+  .name {
+    inline-size: 20%;
+  }
+
+  .email {
+    inline-size: 40%;
+  }
+
+  .phone {
+    inline-size: 30%;
+  }
+  th {
+    background-color: pink;
+  }
+  /* border은 상속인 안됨inherit 부모 border를 상속하게 하는 것 */
+  thead,
+  th,
+  td {
+    border: 1px solid currentColor;
+    /* 폰트사이즈 기준으로 커짐 */
+    padding: 1em;
+  }
+
+  thead {
+    position: sticky;
+    top: 0;
+    inset-block-start: 1;
+  }
+  tbody tr:nth-child(even) {
+    background-color: silver;
+  }
+
+  tbody tr {
+    scroll-snap-align: start;
+  }
+}
+
+/* scroll-snap-align을 쓸려면 밖에 컨테이너 속성을 주어야 함*/
