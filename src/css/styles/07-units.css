@@ -2,6 +2,7 @@
 @import "./../../common/normalize.css";
 
 body {
+  margin: 50px 20px 200px 50px;
 }
 /* px 단위 유동적이지 못함 고정단위 */
 .unit-px {
@@ -30,9 +31,19 @@ body {
 .unit.percentage {
   font-size: 150%;
 }
+
 /* 반응형 폰트 사이즈 창의 크기에 따라 달라짐 min과 max를 줘 만들수 있음 */
 .unit-vw {
   font-size: 3vw;
+}
+/* 상속때문에 div에 10px셀을 줘도 p가 바뀜 */
+.unit-number {
+  font-size: 10px;
+  line-height: 1;
+
+  p {
+    font-size: 20px;
+  }
 }
 
 /* 색상값 */
