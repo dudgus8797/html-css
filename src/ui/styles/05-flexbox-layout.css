@@ -1,0 +1,63 @@
+@import "./../../common/base.css";
+
+.ui_box {
+  background-color: yellow;
+}
+
+.channel_list {
+  display: flex;
+  flex-flow: row wrap;
+  list-style: "";
+  padding-right: 0;
+  padding-inline-start: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-block: 0;
+  width: 60%;
+  inline-size: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-inline: auto;
+  background-color: tomato;
+  /* gap: 1.5em; */
+}
+
+.item {
+  /* glow 1 shlink 1 basis 1 */
+  flex-basis: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1em;
+  /* min-inline-size: 150px; */
+  /* align-items: stretch; */
+
+  @media (min-width: 480px) {
+    flex-basis: 50%;
+  }
+  @media (min-width: 600px) {
+    flex-basis: 33.333%;
+  }
+  @media (min-width: 800px) {
+    flex-basis: 25%;
+  }
+  @media (min-width: 1000px) {
+    flex-basis: 20%;
+  }
+}
+
+.thumb {
+  border: 1px solid currentColor;
+  aspect-ratio: 1/1;
+  background-color: aqua;
+}
+
+.image {
+  width: 100%;
+  inline-size: 100%;
+  vertical-align: middle;
+}
+
+.title {
+  height: 40px;
+  block-size: 40px;
+}
