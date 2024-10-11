@@ -1,0 +1,72 @@
+@import "./../../common/mini-reset.css";
+@import "./../../common/base.css";
+
+body,
+h1 {
+  margin: 50px;
+}
+
+h2 {
+  border: 1px solid currentColor;
+  width: 300px;
+  inline-size: 300px;
+  height: 100px;
+  block-size: 100px;
+  text-align: center;
+  align-content: center;
+}
+/* flex는 부모에게 줘야 바뀜 item은 부모 속성에 영향을 받음*/
+.flex-basic {
+  background: yellow;
+  inline-size: 1000px;
+  height: 600px;
+  block-size: 600px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-block: 20px;
+  box-shadow: 1px 1px 0 0 currentColor, -1px -1px 0 0 currentColor;
+  display: flex;
+  /* 배치 방향 지정 */
+  /* flex-direction: row; */
+  /* 줄바꿈 허용 기본값은 nowrap 줄바꿈 허용x */
+  /* flex-wrap: wrap; */
+  /* 속기법 */
+  flex-flow: row nowrap;
+  /* 메인축 정렬 */
+  justify-content: center;
+  /* 반대축 정렬 */
+  align-content: start;
+  align-items: start;
+  /* gap: 20px; */
+}
+
+.flex-item {
+  background-color: pink;
+  /* width: 500px;
+  inline-size: 500px; */
+  height: 200px;
+  block-size: 200px;
+  flex-basis: 0;
+}
+.flex-item:nth-child(odd) {
+  order: 1;
+}
+.flex-item1 {
+  flex-grow: 1;
+  flex-shrink: 1;
+  background-color: lightgreen;
+}
+.flex-item2 {
+  flex-grow: 1;
+  flex-shrink: 1;
+  background-color: aqua;
+}
+.flex-item3 {
+  flex-grow: 1;
+  flex-shrink: 1;
+  background-color: saddlebrown;
+}
+.flex-item4 {
+  flex-grow: 1;
+  flex-shrink: 1;
+}
