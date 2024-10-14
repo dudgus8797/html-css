@@ -17,7 +17,6 @@ select {
   margin: 0;
   font-size: 1em;
   font-weight: 400;
-  background-color: yellow;
   a,
   svg {
     display: block;
@@ -27,7 +26,10 @@ select {
 .button--icon-circle {
   /* 기본 꾸미는 것을 없앰 하지만 버튼의 경우 없어지지 않는 경우가 있음 그럼 all:aunset을 씀 */
   /* appearance: none; */
-  all: unset;
+  /* all: unset; */
+  border: 0;
+  padding: 0;
+  background-color: transparent;
 
   svg {
     display: block;
@@ -72,21 +74,29 @@ select {
   display: flex;
   flex-flow: row nowrap;
   align-content: center;
-  gap: 12px;
-
+  gap: 48px;
+  /* 내가 포커스를 받으면 자식에게 그림자가 생김 */
+  &:has(input:focus) {
+    box-shadow: 0px 4px 4px 0px rgba(68, 131, 63, 0.15);
+  }
   .brand {
     flex: 0 0 auto;
   }
 
   .search-form {
-    display: flex;
-    flex-flow: row nowrap;
-    flex: 1;
-    align-content: center;
-    gap: 12px;
+    /* display: flex; */
+    /* flex-flow: row nowrap; */
+    /* flex: 1; */
+    /* align-content: center; */
+    /* gap: 12px; */
 
+    /* search-form의 직계자식이 아니라 search-bar의 직계자식이 됨 */
+    display: contents;
     .search {
       flex: 1;
+    }
+    input {
+      outline: none;
     }
     .button {
       /* 확대 축소  */
