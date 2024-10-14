@@ -2,14 +2,17 @@
 :focus {
   outline: none;
 }
+
 :focus-visible {
-  box-shadow: 0 0 2px 2px #03cc5c;
+  box-shadow: 0 0 2px 2px rgb(224, 86, 86, 0.85);
   border-radius: 4px;
 }
+
 input:focus-visible {
   box-shadow: none;
 }
-/* 숨긴 컨텐츠 */
+
+/* 숨김 콘텐츠 */
 .sr-only {
   position: absolute;
   width: 1px;
