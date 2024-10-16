@@ -1,0 +1,75 @@
+@import "./../../common/mordern-reset.css";
+@import "./../../common/base.css";
+
+h1 {
+  margin-block: 1rem;
+}
+
+.grid-item1 {
+  background-color: yellow;
+}
+.grid-item2 {
+  background-color: pink;
+}
+.grid-item3 {
+  background-color: blue;
+}
+
+.grid-item4 {
+  background-color: green;
+}
+
+.grid-box {
+  border: 1px solid green;
+  background-color: gray;
+  display: grid;
+  position: relative;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 50px);
+  /* z-index 음수를 독립적인 존재로 만듦 본문 아래로 깔리지 않음*/
+  isolation: isolate;
+
+  .grid-item1 {
+    /* 1번열에서 시작 2행 병합 */
+    grid-row: 1 / span 2;
+    grid-column: 1 / span 2;
+  }
+  .grid-item2 {
+    grid-row: 2 / span 2;
+    grid-column: 2 / span 2;
+  }
+  .grid-item3 {
+    position: absolute;
+    /* top right bottom left을 한번에 줄수있는 논리 속성 */
+    inset: 2rem;
+    z-index: -1;
+  }
+}
+
+/* 그리드 정렬 */
+.grid-wrapper {
+  border: 1px solid red;
+  block-size: 400px;
+  display: grid;
+  grid-template-columns: repeat(5, 200px);
+  grid-template-rows: repeat(5, 50px);
+  /* justify-items: center;
+  align-items: center; */
+  /* last 아래쪽으로 베이스라인에 정렬 */
+  /* align-items: last baseline; */
+  /* align-item, justify-item의 축약 */
+  /* place-items: center; */
+
+  /* justify-content: center;
+  align-content: center; */
+  /* 행방향 컬럼 방향 순 */
+  place-content: center;
+
+  .grid-item2 {
+    font-size: 1.5rem;
+    /* 자기자신만 정렬 */
+    /* align-self: center;
+    justify-self: center; */
+    place-self: center;
+  }
+}
