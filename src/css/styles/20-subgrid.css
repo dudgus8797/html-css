@@ -1,0 +1,52 @@
+@import "./../../common/mordern-reset.css";
+@import "./../../common/base.css";
+
+h1 {
+  margin-block: 1rem;
+}
+
+/* 카드 컴포넌트 */
+.card {
+  border: 1px solid gray;
+  padding: 2rem;
+  display: flex;
+  flex-flow: column nowrap;
+  row-gap: 1rem;
+
+  figcaption {
+    display: contents;
+  }
+
+  strong {
+    font-size: 1.25rem;
+    color: var(--gray);
+  }
+
+  p {
+    font-size: 0.875rem;
+  }
+  img {
+    aspect-ratio: 1 / 0.6671875;
+    /* 크기 줄이거나 키우지 않고 넣어짐 */
+    object-fit: cover;
+    object-position: 50% 0;
+  }
+}
+
+/* 카트 컴포넌트 배치를 위한 레이아웃 */
+.card-wrapper {
+  background-color: var(--yellow);
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, auto);
+  gap: 1rem;
+
+  .card {
+    display: grid;
+    grid-template-columns: 1fr;
+    /* row를 부모 컨테이너 것을 가져올것이다 */
+    grid-template-rows: subgrid;
+    grid-row: span 3;
+  }
+}
